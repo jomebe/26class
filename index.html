@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선린인터넷고등학교 2학년 6반</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/sunrin-logo.png" alt="선린인터넷고등학교 로고">
+            <h1>선린인터넷고등학교 2학년 6반</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">홈</a></li>
+                <li><a href="notice.html">공지사항</a></li>
+                <li><a href="timetable.html">시간표</a></li>
+                <li><a href="homework.html">과제</a></li>
+                <li><a href="gallery.html">사진첩</a></li>
+                <li><a href="members.html">반 구성원</a></li>
+                <li><a href="chat.html">채팅</a></li>
+                <li><a href="vote.html">투표</a></li>
+            </ul>
+        </nav>
+        <div class="user-area" id="user-area">
+            <!-- 사용자 상태가 자바스크립트로 채워질 곳 -->
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>환영합니다!</h2>
+                <p>선린인터넷고등학교 2학년 6반 웹페이지입니다.</p>
+                <p>우리 반의 모든 정보와 소식을 이곳에서 확인하세요!</p>
+                <div class="hero-actions">
+                    <a href="members.html" class="btn btn-primary">반 구성원 보기</a>
+                    <a href="notice.html" class="btn btn-secondary">공지사항 확인</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="images/sunrin-students.jpg" alt="선린인터넷고등학교 학생들">
+            </div>
+        </section>
+
+        <div class="dashboard">
+            <section class="notices">
+                <div class="section-header">
+                    <h2>최근 공지사항</h2>
+                    <a href="notice.html" class="more-btn">더보기</a>
+                </div>
+                <div class="notice-list" id="recent-notices">
+                    <!-- 공지사항 리스트가 자바스크립트로 채워질 곳 -->
+                </div>
+            </section>
+
+            <section class="upcoming">
+                <div class="section-header">
+                    <h2>다가오는 일정</h2>
+                    <a href="timetable.html" class="more-btn">시간표 보기</a>
+                </div>
+                <div class="calendar" id="upcoming-events">
+                    <!-- 캘린더/일정이 자바스크립트로 채워질 곳 -->
+                </div>
+            </section>
+
+            <section class="homework-summary">
+                <div class="section-header">
+                    <h2>제출 예정 과제</h2>
+                    <a href="homework.html" class="more-btn">모든 과제</a>
+                </div>
+                <div class="homework-list" id="pending-homework">
+                    <!-- 과제 목록이 자바스크립트로 채워질 곳 -->
+                </div>
+            </section>
+
+            <section class="active-votes-summary">
+                <div class="section-header">
+                    <h2>진행 중인 투표</h2>
+                    <a href="vote.html" class="more-btn">모든 투표</a>
+                </div>
+                <div class="active-votes-list" id="active-votes">
+                    <!-- 투표 목록이 자바스크립트로 채워질 곳 -->
+                </div>
+            </section>
+        </div>
+
+        <section class="features">
+            <h2>학급 웹사이트 기능</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📢</div>
+                    <h3>공지사항</h3>
+                    <p>학급의 중요 공지를 확인하세요. 공지 작성 및 댓글 기능도 제공합니다.</p>
+                    <a href="notice.html" class="feature-link">공지 확인하기</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>시간표</h3>
+                    <p>주간 시간표와 학사 일정을 한눈에 확인할 수 있습니다.</p>
+                    <a href="timetable.html" class="feature-link">시간표 보기</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📝</div>
+                    <h3>과제 관리</h3>
+                    <p>과목별 과제 목록을 확인하고 제출 여부를 체크할 수 있습니다.</p>
+                    <a href="homework.html" class="feature-link">과제 확인하기</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📷</div>
+                    <h3>사진첩</h3>
+                    <p>학급 행사 사진과 추억을 공유하고 댓글을 남길 수 있습니다.</p>
+                    <a href="gallery.html" class="feature-link">사진첩 보기</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍👩‍👧‍👦</div>
+                    <h3>반 구성원</h3>
+                    <p>담임 선생님과 학생들의 정보 및 자리 배치도를 확인할 수 있습니다.</p>
+                    <a href="members.html" class="feature-link">구성원 보기</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>실시간 채팅</h3>
+                    <p>학급 친구들과 실시간으로 대화하고 정보를 공유할 수 있습니다.</p>
+                    <a href="chat.html" class="feature-link">채팅하기</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🗳️</div>
+                    <h3>투표 시스템</h3>
+                    <p>학급 내 의사결정을 위한 투표를 생성하고 참여할 수 있습니다.</p>
+                    <a href="vote.html" class="feature-link">투표하기</a>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>로그인 시스템</h3>
+                    <p>학생과 교사 계정으로 로그인하여 권한에 맞는 기능을 이용할 수 있습니다.</p>
+                    <a href="login.html" class="feature-link">로그인하기</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="images/sunrin-logo-small.png" alt="선린인터넷고등학교 로고">
+                <h3>선린인터넷고등학교 2학년 6반</h3>
+            </div>
+            <div class="footer-links">
+                <h4>빠른 링크</h4>
+                <ul>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="notice.html">공지사항</a></li>
+                    <li><a href="timetable.html">시간표</a></li>
+                    <li><a href="homework.html">과제</a></li>
+                    <li><a href="gallery.html">사진첩</a></li>
+                    <li><a href="members.html">반 구성원</a></li>
+                    <li><a href="chat.html">채팅</a></li>
+                    <li><a href="vote.html">투표</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>학교 정보</h4>
+                <p>주소: 서울특별시 용산구 원효로97길 33-4</p>
+                <p>전화: 02-713-6211</p>
+                <p>이메일: sunrin@sunrint.hs.kr</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 선린인터넷고등학교 2학년 6반</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html> 

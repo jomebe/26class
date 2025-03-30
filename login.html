@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 - 선린인터넷고등학교 2학년 6반</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/sunrin-logo.png" alt="선린인터넷고등학교 로고">
+            <h1>선린인터넷고등학교 2학년 6반</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">홈</a></li>
+                <li><a href="notice.html">공지사항</a></li>
+                <li><a href="timetable.html">시간표</a></li>
+                <li><a href="homework.html">과제</a></li>
+                <li><a href="gallery.html">사진첩</a></li>
+                <li><a href="members.html">반 구성원</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="login-container">
+            <h2>로그인</h2>
+            <form id="login-form">
+                <div class="form-group">
+                    <label for="username">학번</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">비밀번호</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="form-group">
+                    <label>사용자 유형</label>
+                    <div class="radio-group">
+                        <input type="radio" id="student" name="userType" value="student" checked>
+                        <label for="student">학생</label>
+                        <input type="radio" id="teacher" name="userType" value="teacher">
+                        <label for="teacher">교사</label>
+                    </div>
+                </div>
+                <button type="submit" class="login-btn">로그인</button>
+            </form>
+            <div class="login-footer">
+                <a href="#" id="forgot-password">비밀번호 찾기</a>
+                <a href="#" id="register">회원가입</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 선린인터넷고등학교 2학년 6반</p>
+        <p>주소: 서울특별시 용산구 원효로97길 33-4</p>
+    </footer>
+
+    <script src="login.js"></script>
+</body>
+</html> 

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반 구성원 - 선린인터넷고등학교 2학년 6반</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="members.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/sunrin-logo.png" alt="선린인터넷고등학교 로고">
+            <h1>선린인터넷고등학교 2학년 6반</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">홈</a></li>
+                <li><a href="notice.html">공지사항</a></li>
+                <li><a href="timetable.html">시간표</a></li>
+                <li><a href="homework.html">과제</a></li>
+                <li><a href="gallery.html">사진첩</a></li>
+                <li><a href="members.html" class="active">반 구성원</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="teacher-section">
+            <h2>담임 선생님</h2>
+            <div class="teacher-card">
+                <div class="teacher-photo">
+                    <img src="images/members/teacher.jpg" alt="김선생 선생님">
+                </div>
+                <div class="teacher-info">
+                    <h3>김선생 선생님</h3>
+                    <p class="teacher-subject">수학</p>
+                    <p class="teacher-description">
+                        안녕하세요, 2학년 6반 담임 김선생입니다. 학생들의 학습과 성장을 위해 최선을 다하겠습니다.
+                        궁금한 점이나 상담이 필요하시면 언제든지 연락주세요.
+                    </p>
+                    <div class="teacher-contact">
+                        <p><strong>이메일:</strong> teacher@sunrin.high.kr</p>
+                        <p><strong>상담시간:</strong> 평일 방과후 16:00~17:30</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seating-plan">
+            <h2>자리 배치도</h2>
+            <div class="seating-container">
+                <div class="teacher-desk">교탁</div>
+                <div class="classroom-grid">
+                    <!-- 자리 배치도가 자바스크립트로 채워질 부분 -->
+                </div>
+            </div>
+            <div class="seating-controls">
+                <button id="random-seats" class="random-btn">자리 섞기</button>
+            </div>
+        </section>
+
+        <section class="students-section">
+            <h2>학생 명단</h2>
+            <div class="students-controls">
+                <div class="search-box">
+                    <input type="text" id="student-search" placeholder="이름 검색...">
+                </div>
+                <div class="filter-dropdown">
+                    <label for="role-filter">역할:</label>
+                    <select id="role-filter">
+                        <option value="all">전체</option>
+                        <option value="class-president">반장</option>
+                        <option value="vice-president">부반장</option>
+                        <option value="treasurer">회계</option>
+                        <option value="class-rep">학급대표</option>
+                    </select>
+                </div>
+            </div>
+            <div class="students-list">
+                <!-- 학생 목록이 자바스크립트로 채워질 부분 -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 선린인터넷고등학교 2학년 6반</p>
+        <p>주소: 서울특별시 용산구 원효로97길 33-4</p>
+    </footer>
+
+    <!-- 학생 상세 정보 모달 -->
+    <div id="student-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="student-detail-container">
+                <!-- 학생 상세 정보가 자바스크립트로 채워질 부분 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="members.js"></script>
+</body>
+</html> 

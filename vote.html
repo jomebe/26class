@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>투표 - 선린인터넷고등학교 2학년 6반</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="vote.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/sunrin-logo.png" alt="선린인터넷고등학교 로고">
+            <h1>선린인터넷고등학교 2학년 6반</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">홈</a></li>
+                <li><a href="notice.html">공지사항</a></li>
+                <li><a href="timetable.html">시간표</a></li>
+                <li><a href="homework.html">과제</a></li>
+                <li><a href="gallery.html">사진첩</a></li>
+                <li><a href="members.html">반 구성원</a></li>
+                <li><a href="chat.html">채팅</a></li>
+                <li><a href="vote.html" class="active">투표</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="vote-header">
+            <h2>학급 투표 시스템</h2>
+            <div class="vote-controls">
+                <div class="vote-filter">
+                    <label for="status-filter">상태:</label>
+                    <select id="status-filter">
+                        <option value="all">전체</option>
+                        <option value="active">진행 중</option>
+                        <option value="ended">종료됨</option>
+                    </select>
+                </div>
+                <button id="create-vote" class="create-btn">투표 만들기</button>
+            </div>
+        </section>
+
+        <section class="active-votes">
+            <h3>진행 중인 투표</h3>
+            <div class="vote-list" id="active-votes-list">
+                <!-- 진행 중인 투표 목록이 동적으로 채워질 곳 -->
+            </div>
+        </section>
+
+        <section class="ended-votes">
+            <h3>종료된 투표</h3>
+            <div class="vote-list" id="ended-votes-list">
+                <!-- 종료된 투표 목록이 동적으로 채워질 곳 -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 선린인터넷고등학교 2학년 6반</p>
+        <p>주소: 서울특별시 용산구 원효로97길 33-4</p>
+    </footer>
+
+    <!-- 투표 생성 모달 -->
+    <div id="vote-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>새 투표 만들기</h2>
+            <form id="vote-form">
+                <div class="form-group">
+                    <label for="vote-title">투표 제목</label>
+                    <input type="text" id="vote-title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="vote-description">설명 (선택사항)</label>
+                    <textarea id="vote-description" name="description" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>투표 옵션</label>
+                    <div id="options-container">
+                        <div class="option-input">
+                            <input type="text" name="options[]" placeholder="옵션 1" required>
+                        </div>
+                        <div class="option-input">
+                            <input type="text" name="options[]" placeholder="옵션 2" required>
+                        </div>
+                    </div>
+                    <button type="button" id="add-option" class="add-option-btn">+ 옵션 추가</button>
+                </div>
+                <div class="form-group">
+                    <label for="vote-deadline">마감일</label>
+                    <input type="datetime-local" id="vote-deadline" name="deadline" required>
+                </div>
+                <div class="form-group">
+                    <label for="vote-type">투표 유형</label>
+                    <select id="vote-type" name="type">
+                        <option value="single">단일 선택</option>
+                        <option value="multiple">다중 선택</option>
+                    </select>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="vote-anonymous" name="anonymous">
+                    <label for="vote-anonymous">익명 투표</label>
+                </div>
+                <button type="submit" class="submit-btn">투표 만들기</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- 투표 상세 모달 -->
+    <div id="vote-detail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close close-detail">&times;</span>
+            <div class="vote-detail-container">
+                <!-- 투표 상세 정보가 동적으로 채워질 곳 -->
+            </div>
+        </div>
+    </div>
+
+    <script src="vote.js"></script>
+</body>
+</html> 

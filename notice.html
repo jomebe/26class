@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공지사항 - 선린인터넷고등학교 2학년 6반</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="notice.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/sunrin-logo.png" alt="선린인터넷고등학교 로고">
+            <h1>선린인터넷고등학교 2학년 6반</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">홈</a></li>
+                <li><a href="notice.html" class="active">공지사항</a></li>
+                <li><a href="timetable.html">시간표</a></li>
+                <li><a href="homework.html">과제</a></li>
+                <li><a href="gallery.html">사진첩</a></li>
+                <li><a href="members.html">반 구성원</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="notice-header">
+            <h2>공지사항</h2>
+            <div class="notice-controls">
+                <div class="notice-filter">
+                    <label for="category-filter">카테고리:</label>
+                    <select id="category-filter">
+                        <option value="all">전체</option>
+                        <option value="academic">학사일정</option>
+                        <option value="exam">시험</option>
+                        <option value="event">행사</option>
+                        <option value="etc">기타</option>
+                    </select>
+                </div>
+                <button id="write-notice" class="write-btn">글쓰기</button>
+            </div>
+        </section>
+
+        <section class="notice-list">
+            <!-- 공지사항 목록이 동적으로 채워질 곳 -->
+        </section>
+
+        <section class="pagination">
+            <button class="page-btn" data-page="1">1</button>
+            <button class="page-btn" data-page="2">2</button>
+            <button class="page-btn" data-page="3">3</button>
+            <button class="page-btn next" data-page="next">다음 ></button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 선린인터넷고등학교 2학년 6반</p>
+        <p>주소: 서울특별시 용산구 원효로97길 33-4</p>
+    </footer>
+
+    <!-- 공지사항 작성 모달 -->
+    <div id="notice-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>공지사항 작성</h2>
+            <form id="notice-form">
+                <div class="form-group">
+                    <label for="notice-title">제목</label>
+                    <input type="text" id="notice-title" name="title" required>
+                </div>
+                <div class="form-group">
+                    <label for="notice-category">카테고리</label>
+                    <select id="notice-category" name="category" required>
+                        <option value="academic">학사일정</option>
+                        <option value="exam">시험</option>
+                        <option value="event">행사</option>
+                        <option value="etc">기타</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="notice-content">내용</label>
+                    <textarea id="notice-content" name="content" rows="10" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="notice-file">첨부파일</label>
+                    <input type="file" id="notice-file" name="file">
+                </div>
+                <button type="submit" class="submit-btn">등록하기</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="notice.js"></script>
+</body>
+</html> 
