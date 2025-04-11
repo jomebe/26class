@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sunrin-blue: #0047A0;
+  --sunrin-green: #009B4C;
+  --sunrin-red: #DF2E38;
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@layer base {
+  :root {
+    --font-sans: var(--font-noto-sans-kr), ui-sans-serif, system-ui;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* 선린고 색상 직접 정의 스타일 */
+.bg-sunrin-blue { background-color: var(--sunrin-blue) !important; }
+.bg-sunrin-green { background-color: var(--sunrin-green) !important; }
+.bg-sunrin-red { background-color: var(--sunrin-red) !important; }
+.text-sunrin-blue { color: var(--sunrin-blue) !important; }
+.text-sunrin-green { color: var(--sunrin-green) !important; }
+.text-sunrin-red { color: var(--sunrin-red) !important; }
+.border-sunrin-blue { border-color: var(--sunrin-blue) !important; }
+.border-sunrin-green { border-color: var(--sunrin-green) !important; }
+.border-sunrin-red { border-color: var(--sunrin-red) !important; }
+.from-sunrin-blue { --tw-gradient-from: var(--sunrin-blue); }
+.to-sunrin-blue { --tw-gradient-to: var(--sunrin-blue); }
+.from-sunrin-green { --tw-gradient-from: var(--sunrin-green); }
+.to-sunrin-green { --tw-gradient-to: var(--sunrin-green); }
+.from-sunrin-red { --tw-gradient-from: var(--sunrin-red); }
+.to-sunrin-red { --tw-gradient-to: var(--sunrin-red); }
+.via-sunrin-green { --tw-gradient-via: var(--sunrin-green); }
+
+.hover\:bg-sunrin-blue\/90:hover { background-color: rgba(0, 71, 160, 0.9) !important; }
+.hover\:bg-sunrin-green\/90:hover { background-color: rgba(0, 155, 76, 0.9) !important; }
+.hover\:bg-sunrin-red\/90:hover { background-color: rgba(223, 46, 56, 0.9) !important; }
+
+/* 버튼 컴포넌트 */
+.btn-primary {
+  background-color: var(--sunrin-blue);
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+.btn-primary:hover {
+  background-color: rgba(0, 71, 160, 0.9);
+}
+
+.btn-secondary {
+  background-color: var(--sunrin-green);
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+.btn-secondary:hover {
+  background-color: rgba(0, 155, 76, 0.9);
+}
+
+.btn-danger {
+  background-color: var(--sunrin-red);
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+.btn-danger:hover {
+  background-color: rgba(223, 46, 56, 0.9);
+}
